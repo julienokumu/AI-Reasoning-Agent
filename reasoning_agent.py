@@ -2,7 +2,10 @@ from phi.agent import Agent
 from phi.model.openai import OpenAIChat
 import os
 
-api_key=os.environ["API_KEY"]
+api_key = os.environ["API_KEY"]
+# temporary fix for updating the OPENAI_API_KEY
+# proper fix coming soon
+os.environ["OPENAI_API_KEY"] = api_key
 
 reasoning_agent = Agent(
     name="Reasoning Agent",
